@@ -24,11 +24,6 @@ function App(props) {
             <Main>
                 <Routes>
                     <Route path="/" element={<Login />} />
-                    {/* <Route path="/home" element={<HomeContainer />} />
-                    <Route path="/network" element={<Network />} />
-                    <Route path="/job" element={<Job />} />
-                    <Route path="/message" element={<Message />} />
-                    <Route path="/notification" element={<Notifications />} /> */}
                     <Route path="/" element={<Dashboard />}>
                         <Route path="/home" element={<HomeContainer />} />
                         <Route path="/network" element={<Network />} />

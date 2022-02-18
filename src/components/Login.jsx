@@ -6,13 +6,6 @@ import { Navigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Login = (props) => {
-    // if (!props.user) {
-    //     return (
-    //         <Loading>
-    //             <img src="images/loader.svg" alt="" />
-    //         </Loading>
-    //     );
-    // }
     return (
         <Container>
             {props.user && <Navigate to="/home" replace={true} />}
@@ -52,15 +45,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
-
-const Loading = styled.h1`
-    margin-top: -50px;
-    font-size: 3rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-`;
 
 const Container = styled.div`
     padding: 0;
@@ -156,7 +140,6 @@ const Hero = styled.div`
         }
     }
     img {
-        /* z-index: -1; */
         width: 700px;
         height: 670px;
         position: absolute;
